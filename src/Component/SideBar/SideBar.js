@@ -4,21 +4,27 @@ import { connect} from 'react-redux';
 
 const SideBar = (props) => {
     console.log(props)
+    const data = Object.keys(props.contacts).map(key=> props.contacts[key])
+    console.log(data)
     return (
         <aside className={classes.SideBar}>
             <p>Sidebar</p>
+            <ul>
+                {data.map(contact => (
+                    <ul key={contact.userId}>
+                        <li>{contact.userName}</li>
+                        <img alt="userImage"src={contact.avatar} style={{width:'100%', height:'auto'}}/>
+                    </ul>
+                ))}
+            </ul>
         </aside>
     )
 };
 
 const mapStateToProps = state => {
-    // console.log(state)
-    const {contacts} = state;
-    console.log(contacts)
-    for (let key in contacts) {
-        return contacts[key]
-    }
-    
+    return {
+        contacts:state.contacts
+    }    
 }
 
 export default connect(mapStateToProps,null)(SideBar);
