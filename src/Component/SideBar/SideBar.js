@@ -8,7 +8,6 @@ const SideBar = (props) => {
     console.log(data)
     return (
         <aside className={classes.SideBar}>
-            <p>Sidebar</p>
             <ul>
                 {data.map(contact => (
                     <ul key={contact.userId}>
