@@ -3,9 +3,9 @@ import classes from './SideBar.module.css';
 import { connect} from 'react-redux';
 
 const SideBar = (props) => {
-    console.log(props)
+    // console.log(props)
     const data = Object.keys(props.contacts).map(key=> props.contacts[key])
-    console.log(data)
+    // console.log(data)
     return (
         <aside className={classes.SideBar}>
             <ul>
