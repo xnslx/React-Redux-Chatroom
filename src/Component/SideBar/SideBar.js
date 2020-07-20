@@ -8,14 +8,14 @@ const SideBar = (props) => {
     // console.log(data)
     return (
         <aside className={classes.SideBar}>
-            <ul>
+            <>
                 {data.map(contact => (
-                    <ul key={contact.userId}>
+                    <ul key={contact.userId} className={classes.List}>
                         <li>{contact.userName}</li>
                         <img alt="userImage"src={contact.avatar} style={{width:'100%', height:'auto'}}/>
                     </ul>
                 ))}
-            </ul>
+            </>
         </aside>
     )
 };

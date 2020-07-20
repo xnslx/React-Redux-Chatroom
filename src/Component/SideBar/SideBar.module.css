@@ -4,3 +4,8 @@
     width: 80px;
     flex-grow: 1;
 }
+
+.List {
+    background-color: red;
+    list-style: none;
+}
