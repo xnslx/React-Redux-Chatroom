@@ -11,8 +11,8 @@ const SideBar = (props) => {
             <>
                 {data.map(contact => (
                     <ul key={contact.userId} className={classes.List}>
-                        <li>{contact.userName}</li>
-                        <img alt="userImage"src={contact.avatar} style={{width:'100%', height:'auto'}}/>
+                        <img alt="userImage"src={contact.avatar} style={{width:'64px', height:'64px', borderRadius:'50%', objectFit:'cover'}}/>
+                        <li className={classes.ListItem}><strong>{contact.userName}</strong></li>
                     </ul>
                 ))}
             </>

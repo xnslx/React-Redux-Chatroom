@@ -2,27 +2,28 @@ import xianImage from '../../assets/ayo-ogunseinde-sibVwORYqs0-unsplash.jpg';
 import YuanchaoImage from '../../assets/kal-visuals-b1Hg7QI-zcc-unsplash.jpg';
 import LydiaImage from '../../assets/michael-dam-mEZ3PoFGs_k-unsplash.jpg';
 import SkylerImage from '../../assets/philipe-cavalcante-Ugpcxb0jG4Q-unsplash.jpg';
+import UserImage from '../../assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg';
 import {combineReducers} from 'redux';
 import {v4} from 'uuid';
 
 const contacts = {
-    Xian:{
-        userName:'Xian',
+    Tony:{
+        userName:'Tony',
         avatar: xianImage,
         userId: v4()
     },
-    Yuanchao:{
-        userName:'Yuanchao',
+    Jane:{
+        userName:'Jane',
         avatar:YuanchaoImage,
         userId:v4()
     },
-    Lydia:{
-        userName:'Lydia',
+    Anny:{
+        userName:'Anny',
         avatar:LydiaImage,
         userId:v4()
     },
-    Skyler:{
-        userName:'Skyler',
+    Emily:{
+        userName:'Emily',
         avatar:SkylerImage,
         userId:v4()
     }
@@ -36,8 +37,23 @@ const contactsReducer = (state=contacts,action) => {
 
 }
 
+const user = {
+    userName:'Xian',
+    avatar:UserImage,
+    userId:v4()
+}
+
+const userReducer = (state=user,action) => {
+    switch(action.type) {
+        default:
+            return state
+    }
+
+}
+
 const rootReducer = combineReducers({
-    contacts: contactsReducer
+    contacts: contactsReducer,
+    user:userReducer
 })
 
 export default rootReducer;
