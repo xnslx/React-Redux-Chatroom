@@ -1,0 +1,18 @@
+.User {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.Image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.Button {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

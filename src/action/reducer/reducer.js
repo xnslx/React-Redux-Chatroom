@@ -6,25 +6,31 @@ import UserImage from '../../assets/christopher-campbell-rDEOVtE7vOs-unsplash.jp
 import {combineReducers} from 'redux';
 import {v4} from 'uuid';
 
+const txtgen = require('txtgen');
+
 const contacts = {
     Tony:{
         userName:'Tony',
         avatar: xianImage,
+        status:txtgen.sentence(),
         userId: v4()
     },
     Jane:{
         userName:'Jane',
         avatar:YuanchaoImage,
+        status:txtgen.sentence(),
         userId:v4()
     },
     Anny:{
         userName:'Anny',
         avatar:LydiaImage,
+        status:txtgen.sentence(),
         userId:v4()
     },
     Emily:{
         userName:'Emily',
         avatar:SkylerImage,
+        status:txtgen.sentence(),
         userId:v4()
     }
 }
@@ -40,6 +46,7 @@ const contactsReducer = (state=contacts,action) => {
 const user = {
     userName:'Xian',
     avatar:UserImage,
+    status:txtgen.sentence(),
     userId:v4()
 }
 
