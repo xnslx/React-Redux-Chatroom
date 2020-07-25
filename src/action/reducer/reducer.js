@@ -4,6 +4,7 @@ import LydiaImage from '../../assets/michael-dam-mEZ3PoFGs_k-unsplash.jpg';
 import SkylerImage from '../../assets/philipe-cavalcante-Ugpcxb0jG4Q-unsplash.jpg';
 import UserImage from '../../assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg';
 import {combineReducers} from 'redux';
+import * as actionTypes from './../action';
 import {v4} from 'uuid';
 
 const txtgen = require('txtgen');
@@ -58,9 +59,26 @@ const userReducer = (state=user,action) => {
 
 }
 
+const activeUserIdInitial = {
+    id: null
+}
+
+const activeUserIdReducer = (state=activeUserIdInitial, action) =>{
+    switch(action.type) {
+        case actionTypes.SET_ACTIVE_USER_ID:
+            return {
+                ...state,
+                id: action.activeUserId
+            }
+        default:
+            return state
+    }
+}
+
 const rootReducer = combineReducers({
     contacts: contactsReducer,
-    user:userReducer
+    user:userReducer,
+    activeUserId:activeUserIdReducer
 })
 
 export default rootReducer;
