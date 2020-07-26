@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Header.module.css';
 
 const Header = (props) => {
-    // console.log(props)
+    console.log(props)
     const {userName, status} = props.user
     return (
         <header className={classes.Header}>
