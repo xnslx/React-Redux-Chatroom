@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 const Main = (props) => {
     let panel = null;
-    if(!props.activeUserId) {
+    if(props.activeUserId.id === null) {
         panel = <User />
     } else {
         panel = <ChatWindow />
@@ -19,7 +19,7 @@ const Main = (props) => {
 };
 
 const mapStateToProps = state => {
-    console.log(state)
+    // console.log(state)
     return {
         activeUserId: state.activeUserId
     }
