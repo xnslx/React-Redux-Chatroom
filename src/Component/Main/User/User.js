@@ -10,7 +10,7 @@ const User = (props) => {
         <div className={classes.User}>
             <h2>Welcome,{userName}</h2>
             <img alt ="userImage"src={avatar} style={{width:'72px', height:'72px', borderRadius:'50%', objectFit:'cover'}} className={classes.Image}/>
-            <p style={{width:'60%', marginLeft:'auto', marginRight:'auto'}}><strong>Status</strong>:{status}</p>
+            <p style={{width:'30vw', marginLeft:'auto', marginRight:'auto'}}><strong>Status</strong>:{status}</p>
             <button className={classes.Button}>Start a conversation</button>
         </div>
     )
