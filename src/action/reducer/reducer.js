@@ -74,11 +74,27 @@ const activeUserIdReducer = (state=activeUserIdInitial, action) =>{
             return state
     }
 }
+export const getMessages = number => {
+    let messages = {}
+    for(let i=0; i< number; i++) {
+        messages[i] = txtgen.sentence()
+    }
+    return messages
+}
+
+
+const messagesReducer = (state = getMessages(10),action) => {
+    switch(action.type) {
+        default:
+            return state
+    }
+}
 
 const rootReducer = combineReducers({
     contacts: contactsReducer,
     user:userReducer,
-    activeUserId:activeUserIdReducer
+    activeUserId:activeUserIdReducer,
+    messages:messagesReducer
 })
 
 export default rootReducer;

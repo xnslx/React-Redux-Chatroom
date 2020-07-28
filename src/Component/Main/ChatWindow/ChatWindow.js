@@ -3,6 +3,7 @@ import classes from './ChatWindow.module.css';
 import Header from './Header/Header';
 import {connect} from 'react-redux';
 
+
 const ChatWindow = (props) => {
 
     const activeUserList = Object.keys(props.contacts).map(key=> props.contacts[key])
@@ -30,5 +31,6 @@ const mapStateToProps = state => {
         contacts:state.contacts
     }
 }
+
 
 export default connect(mapStateToProps)(ChatWindow);
