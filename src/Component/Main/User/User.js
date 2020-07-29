@@ -3,7 +3,7 @@ import { connect} from 'react-redux';
 import classes from './User.module.css';
 
 const User = (props) => {
-    console.log(props)
+    // console.log(props)
     const {userName, avatar, status} = props.user;
     
     return (

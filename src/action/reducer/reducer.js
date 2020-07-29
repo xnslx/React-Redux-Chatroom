@@ -9,6 +9,7 @@ import {v4} from 'uuid';
 
 const txtgen = require('txtgen');
 
+
 const contacts = {
     Tony:{
         userName:'Tony',
@@ -74,16 +75,91 @@ const activeUserIdReducer = (state=activeUserIdInitial, action) =>{
             return state
     }
 }
-export const getMessages = number => {
-    let messages = {}
-    for(let i=0; i< number; i++) {
-        messages[i] = txtgen.sentence()
+
+// const getMessages = (number) => {
+//     let messages = {}
+//     for(let i=0; i< number; i++) {
+//         messages[i] = txtgen.sentence()
+//     }
+//     return messages
+// }
+
+const messagesInitial = {
+    Tony:{
+        0:{
+            is_user_msg: false,
+            text:txtgen.sentence()
+        },
+        1:{
+            is_user_msg: true,
+            text:txtgen.sentence()
+        },
+        3:{
+            is_user_msg: false,
+            text:txtgen.sentence()
+        },
+        4:{
+            is_user_msg: true,
+            text:txtgen.sentence()
+        }
+    },
+    Jane:{
+        0:{
+            is_user_msg: false,
+            text:txtgen.sentence()
+        },
+        1:{
+            is_user_msg: true,
+            text:txtgen.sentence()
+        },
+        3:{
+            is_user_msg: false,
+            text:txtgen.sentence()
+        },
+        4:{
+            is_user_msg: true,
+            text:txtgen.sentence()
+        }
+    },
+    Anny:{
+        0:{
+            is_user_msg: false,
+            text:txtgen.sentence()
+        },
+        1:{
+            is_user_msg: true,
+            text:txtgen.sentence()
+        },
+        3:{
+            is_user_msg: false,
+            text:txtgen.sentence()
+        },
+        4:{
+            is_user_msg: true,
+            text:txtgen.sentence()
+        }
+    },
+    Emily:{
+        0:{
+            is_user_msg: false,
+            text:txtgen.sentence()
+        },
+        1:{
+            is_user_msg: true,
+            text:txtgen.sentence()
+        },
+        3:{
+            is_user_msg: false,
+            text:txtgen.sentence()
+        },
+        4:{
+            is_user_msg: true,
+            text:txtgen.sentence()
+        }
     }
-    return messages
 }
 
-
-const messagesReducer = (state = getMessages(10),action) => {
+const messagesReducer = (state = messagesInitial,action) => {
     switch(action.type) {
         default:
             return state
