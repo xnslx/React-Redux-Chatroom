@@ -88,72 +88,88 @@ const messagesInitial = {
     messages:{
         Tony:{
             0:{
+                id:v4(),
                 is_user_msg: false,
                 text:txtgen.sentence()
             },
             1:{
+                id:v4(),
                 is_user_msg: true,
                 text:txtgen.sentence()
             },
             2:{
+                id:v4(),
                 is_user_msg: false,
                 text:txtgen.sentence()
             },
             3:{
+                id:v4(),
                 is_user_msg: true,
                 text:txtgen.sentence()
             }
         },
         Jane:{
             0:{
+                id:v4(),
                 is_user_msg: false,
                 text:txtgen.sentence()
             },
             1:{
+                id:v4(),
                 is_user_msg: true,
                 text:txtgen.sentence()
             },
             2:{
+                id:v4(),
                 is_user_msg: false,
                 text:txtgen.sentence()
             },
             3:{
+                id:v4(),
                 is_user_msg: true,
                 text:txtgen.sentence()
             }
         },
         Anny:{
             0:{
+                id:v4(),
                 is_user_msg: false,
                 text:txtgen.sentence()
             },
             1:{
+                id:v4(),
                 is_user_msg: true,
                 text:txtgen.sentence()
             },
             2:{
+                id:v4(),
                 is_user_msg: false,
                 text:txtgen.sentence()
             },
             3:{
+                id:v4(),
                 is_user_msg: true,
                 text:txtgen.sentence()
             }
         },
         Emily:{
             0:{
+                id:v4(),
                 is_user_msg: false,
                 text:txtgen.sentence()
             },
             1:{
+                id:v4(),
                 is_user_msg: true,
                 text:txtgen.sentence()
             },
             2:{
+                id:v4(),
                 is_user_msg: false,
                 text:txtgen.sentence()
             },
             3:{
+                id:v4(),
                 is_user_msg: true,
                 text:txtgen.sentence()
             }

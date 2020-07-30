@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './ChatWindow.module.css';
 import Header from './Header/Header';
+import Chats from './Chats/Chats';
 import {connect} from 'react-redux';
 
 
@@ -16,9 +17,12 @@ const ChatWindow = (props) => {
         }
     }
     console.log(activeUser)
+    const activeUserMessages = Object.keys(props.activeUserMessages).map(key=>props.activeUserMessages[key])
+    console.log(activeUserMessages)
     return (
         <div className={classes.Container}>
             <Header user={activeUser}/>
+            <Chats activeUserMessages={activeUserMessages}/>
         </div>
     )
 };
