@@ -29,7 +29,8 @@ const mapStateToProps = state => {
     return {
         activeUserId: state.activeUserId,
         contacts:state.contacts,
-        messages:state.messages[state.activeUserId]
+        messages:state.messages.messages,
+        activeUserMessages:state.messages.activeUserMessages
     }
 }
 

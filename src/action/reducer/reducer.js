@@ -85,82 +85,90 @@ const activeUserIdReducer = (state=activeUserIdInitial, action) =>{
 // }
 
 const messagesInitial = {
-    Tony:{
-        0:{
-            is_user_msg: false,
-            text:txtgen.sentence()
+    messages:{
+        Tony:{
+            0:{
+                is_user_msg: false,
+                text:txtgen.sentence()
+            },
+            1:{
+                is_user_msg: true,
+                text:txtgen.sentence()
+            },
+            2:{
+                is_user_msg: false,
+                text:txtgen.sentence()
+            },
+            3:{
+                is_user_msg: true,
+                text:txtgen.sentence()
+            }
         },
-        1:{
-            is_user_msg: true,
-            text:txtgen.sentence()
+        Jane:{
+            0:{
+                is_user_msg: false,
+                text:txtgen.sentence()
+            },
+            1:{
+                is_user_msg: true,
+                text:txtgen.sentence()
+            },
+            2:{
+                is_user_msg: false,
+                text:txtgen.sentence()
+            },
+            3:{
+                is_user_msg: true,
+                text:txtgen.sentence()
+            }
         },
-        3:{
-            is_user_msg: false,
-            text:txtgen.sentence()
+        Anny:{
+            0:{
+                is_user_msg: false,
+                text:txtgen.sentence()
+            },
+            1:{
+                is_user_msg: true,
+                text:txtgen.sentence()
+            },
+            2:{
+                is_user_msg: false,
+                text:txtgen.sentence()
+            },
+            3:{
+                is_user_msg: true,
+                text:txtgen.sentence()
+            }
         },
-        4:{
-            is_user_msg: true,
-            text:txtgen.sentence()
+        Emily:{
+            0:{
+                is_user_msg: false,
+                text:txtgen.sentence()
+            },
+            1:{
+                is_user_msg: true,
+                text:txtgen.sentence()
+            },
+            2:{
+                is_user_msg: false,
+                text:txtgen.sentence()
+            },
+            3:{
+                is_user_msg: true,
+                text:txtgen.sentence()
+            }
         }
     },
-    Jane:{
-        0:{
-            is_user_msg: false,
-            text:txtgen.sentence()
-        },
-        1:{
-            is_user_msg: true,
-            text:txtgen.sentence()
-        },
-        3:{
-            is_user_msg: false,
-            text:txtgen.sentence()
-        },
-        4:{
-            is_user_msg: true,
-            text:txtgen.sentence()
-        }
-    },
-    Anny:{
-        0:{
-            is_user_msg: false,
-            text:txtgen.sentence()
-        },
-        1:{
-            is_user_msg: true,
-            text:txtgen.sentence()
-        },
-        3:{
-            is_user_msg: false,
-            text:txtgen.sentence()
-        },
-        4:{
-            is_user_msg: true,
-            text:txtgen.sentence()
-        }
-    },
-    Emily:{
-        0:{
-            is_user_msg: false,
-            text:txtgen.sentence()
-        },
-        1:{
-            is_user_msg: true,
-            text:txtgen.sentence()
-        },
-        3:{
-            is_user_msg: false,
-            text:txtgen.sentence()
-        },
-        4:{
-            is_user_msg: true,
-            text:txtgen.sentence()
-        }
-    }
+    activeUserMessages:{}
 }
 
 const messagesReducer = (state = messagesInitial,action) => {
     switch(action.type) {
+        case actionTypes.GET_MESSAGES:
+            return{
+                ...state,
+                activeUserMessages:state.messages[action.userName]
+            }
         default:
             return state
     }

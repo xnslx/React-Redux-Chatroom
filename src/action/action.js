@@ -21,6 +21,6 @@ export const setActiveUserId = id => {
 export const getMessages = userName => {
     return {
         type: GET_MESSAGES,
-        userName
+        userName: userName
     }
 }
