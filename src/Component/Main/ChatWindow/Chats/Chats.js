@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import classes from './Chats.module.css';
 
 const Chats = (props) => {
     // console.log(props)
-    const {activeUserMessages} = props;
+    const {activeUserMessages,is_user_msg} = props;
     console.log(activeUserMessages)
     
     return (
-        <div>
+        <div className={classes.Container}>
             {activeUserMessages.map(obj => (
-                <span key={obj.id}>{obj.text}</span>
+                <span key={obj.id} className={`Chats ${is_user_msg ? "is_user_msg" : ""}`}>{obj.text}</span>
             ))}
         </div>
     )
