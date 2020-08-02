@@ -1,7 +1,12 @@
 import React from 'react';
 import classes from './Chats.module.css';
+import Chat from './Chat/Chat';
 
 const Chats = (props) => {
+    // const [object] = props.activeUserMessages;
+    // console.log(object)
+    // const {is_user_msg} = object;
+    // console.log(is_user_msg)
     const {activeUserMessages} = props;
     console.log(activeUserMessages)
     
@@ -18,9 +23,7 @@ const Chats = (props) => {
     // console.log(isUserMsg)
     return (
         <div className={classes.Container}>
-            {activeUserMessages.map(obj => (
-                <span key={obj.id} className={`Chats ${obj.is_user_msg ? "is-user-msg" : ""}`}>{obj.text}</span>
-            ))}
+            <Chat messages={activeUserMessages}/>
         </div>
     )
 };
