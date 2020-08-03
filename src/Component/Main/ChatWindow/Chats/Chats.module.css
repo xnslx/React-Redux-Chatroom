@@ -1,20 +1,6 @@
-.Container {
-    margin-top: 20px;
+/* .Chats {
     display: flex;
     flex-direction: column;
-    width: 30vw;
-}
-
-.Chats {
-    width: 30vw;
-    height: auto;
-    background-color: rgb(230, 230, 230);
-    padding-bottom: 20px;
-    margin-bottom: 12px;
-}
-
-.Chats.is-user-msg {
-    width: 30vw;
-    height: auto;
-    background-color: rgb(59, 166, 253);
-}
+    flex: 1 1 0;
+    justify-content: flex-start;
+} */

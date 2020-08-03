@@ -5,8 +5,9 @@ const Chat = (props) => {
     console.log(props);
     const {messages} = props;
     console.log(messages)
+
     return (
-        <div className={classes.Container}>
+        <div className={classes.ChatContainer}>
             {props.messages.map(message => (
                 <span key={message.id} className={`Chat ${message.is_user_msg ? "is-user-msg" : ""}`}>{message.text}</span>
             ))}
