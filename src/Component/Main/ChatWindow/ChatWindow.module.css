@@ -1,4 +1,7 @@
 .Container {
     /* background-color: #333333; */
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
     height: 100vh;
 }

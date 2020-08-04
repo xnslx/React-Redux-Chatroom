@@ -1,15 +1,18 @@
 import React from 'react';
-// import classes from './Chats.module.css';
+import classes from './Chats.module.css';
 import Chat from './Chat/Chat';
 
 const Chats = (props) => {
+    console.log('props', props)
     const {activeUserMessages} = props;
     console.log(activeUserMessages)
     
     return (
-        <>
-            <Chat messages={activeUserMessages}/>
-        </>
+        <div className={classes.Chats}>
+            {activeUserMessages.map(message => (
+                <Chat message={message.text} key={message.id} isUserMsg={message.is_user_msg}/>
+            ))}
+        </div>
     )
 };
 

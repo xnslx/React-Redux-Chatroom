@@ -1,6 +1,9 @@
-/* .Chats {
+.Chats {
+    flex: 1 1 0;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
-    flex: 1 1 0;
-    justify-content: flex-start;
-} */
+    width: 85%;
+}

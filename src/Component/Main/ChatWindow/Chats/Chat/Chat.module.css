@@ -9,7 +9,7 @@
 }
 
 .Chat {
-    width: 30vw;
+    max-width: 90%;
     height: auto;
     background-color: rgb(230, 230, 230);
     padding-bottom: 20px;
@@ -19,5 +19,6 @@
 }
 
 .Chat.is-user-msg {
+    margin-left: auto;
     background-color: rgb(59, 166, 253);
 }
