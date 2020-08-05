@@ -6,7 +6,6 @@
 }
 
 .List {
-    /* background-color: red; */
     list-style: none;
     display: flex;
     padding-left: 20px;

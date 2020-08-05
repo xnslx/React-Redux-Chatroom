@@ -7,3 +7,10 @@
     flex-direction: column;
     width: 85%;
 }
+
+@media(min-width:576px) {
+    .Chats {
+        width: 575px;
+        margin: 20px -400px 20px 20px;
+    }
+}
