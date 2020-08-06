@@ -190,11 +190,27 @@ const messagesReducer = (state = messagesInitial,action) => {
     }
 }
 
+const userInputInitial = {
+    value:''
+}
+
+const userInputReducer = (state=userInputInitial, action) => {
+    switch(action.type) {
+        case actionTypes.USER_INPUT:
+            return {
+                value:action.userInput
+            }
+        default:
+                return state
+    }
+}
+
 const rootReducer = combineReducers({
     contacts: contactsReducer,
     user:userReducer,
     activeUserId:activeUserIdReducer,
-    messages:messagesReducer
+    messages:messagesReducer,
+    userInput:userInputReducer
 })
 
 export default rootReducer;

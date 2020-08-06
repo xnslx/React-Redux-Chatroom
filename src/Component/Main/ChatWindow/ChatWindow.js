@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './ChatWindow.module.css';
 import Header from './Header/Header';
 import Chats from './Chats/Chats';
+import UserInput from './UserInput/UserInput';
 import {connect} from 'react-redux';
 
 
@@ -24,6 +25,7 @@ const ChatWindow = (props) => {
         <div className={classes.Container}>
             <Header user={activeUser}/>
             <Chats activeUserMessages={activeUserMessages} activeUser={activeUser}/>
+            <UserInput />
         </div>
     )
 };
