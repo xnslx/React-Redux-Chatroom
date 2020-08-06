@@ -185,6 +185,18 @@ const messagesReducer = (state = messagesInitial,action) => {
                 ...state,
                 activeUserMessages:state.messages[action.userName]
             }
+        case actionTypes.USER_SUBMIT:
+            const number =4
+            return {
+                ...state,
+                activeUserMessages:Object.assign(state.activeUserMessages, {
+                    [number]: {
+                        id:v4(),
+                        is_user_msg:true,
+                        text:action.userInput
+                    }
+                } )
+            }
         default:
             return state
     }

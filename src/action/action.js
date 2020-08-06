@@ -1,6 +1,7 @@
 export const SET_ACTIVE_USER_ID = ' SET_ACTIVE_USER_ID';
 export const GET_MESSAGES = 'GET_MESSAGES';
 export const USER_INPUT = 'USER_INPUT';
+export const USER_SUBMIT = 'USER_SUBMIT';
 
 // const txtgen = require('txtgen');
 
@@ -30,5 +31,13 @@ export const userInput = input => {
     return {
         type: USER_INPUT,
         userInput: input
+    }
+}
+
+export const handleUserSubmit = (input, id) => {
+    return {
+        type: USER_SUBMIT,
+        userInput: input,
+        activeUserId: id
     }
 }
