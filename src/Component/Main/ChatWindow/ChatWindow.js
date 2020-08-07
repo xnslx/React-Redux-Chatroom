@@ -18,13 +18,13 @@ const ChatWindow = (props) => {
         }
     }
     console.log('activeUser', activeUser)
-    const activeUserMessages = Object.keys(props.activeUserMessages).map(key=>props.activeUserMessages[key])
-    console.log('activeUserMessages',activeUserMessages)
+    // const activeUserMessages = Object.keys(props.activeUserMessages).map(key=>props.activeUserMessages[key])
+    // console.log('activeUserMessages',activeUserMessages)
 
     return (
         <div className={classes.Container}>
             <Header user={activeUser}/>
-            <Chats activeUserMessages={activeUserMessages} activeUser={activeUser}/>
+            <Chats activeUserMessages={props.activeUserMessages} activeUser={activeUser}/>
             <UserInput />
         </div>
     )

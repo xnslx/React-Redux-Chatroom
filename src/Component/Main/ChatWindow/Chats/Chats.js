@@ -5,11 +5,13 @@ import Chat from './Chat/Chat';
 const Chats = (props) => {
     console.log('props', props)
     const {activeUserMessages} = props;
-    console.log(activeUserMessages)
+    console.log('activeUserMessages',activeUserMessages)
+    
+    const updatedActiveUserMessages = Object.keys(activeUserMessages).map(key=>activeUserMessages[key])
     
     return (
         <div className={classes.Chats}>
-            {activeUserMessages.map(message => (
+            {updatedActiveUserMessages.map(message => (
                 <Chat message={message.text} key={message.id} isUserMsg={message.is_user_msg}/>
             ))}
         </div>

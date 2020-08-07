@@ -3,6 +3,7 @@ import {userInput, handleUserSubmit} from './../../../../action/action';
 import {connect} from 'react-redux';
 
 const UserInput = (props) => {
+    console.log(props)
 
     const userInputChangeHandler = (e) => {
         props.dispatch(userInput(e.target.value))
@@ -10,7 +11,7 @@ const UserInput = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        props.dispatch(handleUserSubmit(props.userInput.value, props.activeUserId))
+        props.dispatch(handleUserSubmit(props.userInput.value, props.userName,props.activeUserId))
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -24,7 +25,7 @@ const UserInput = (props) => {
 };
 
 const mapStateToProps = state => {
-    console.log(state)
+    // console.log(state)
     return {
         activeUserId: state.activeUserId,
         contacts:state.contacts,
