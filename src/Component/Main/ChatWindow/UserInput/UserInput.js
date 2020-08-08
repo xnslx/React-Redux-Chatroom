@@ -11,7 +11,8 @@ const UserInput = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        props.dispatch(handleUserSubmit(props.userInput.value, props.userName,props.activeUserId))
+        props.dispatch(handleUserSubmit(props.userInput.value, props.activeUserId))
+        props.userInput.value =''
     }
     return (
         <form onSubmit={handleSubmit}>
