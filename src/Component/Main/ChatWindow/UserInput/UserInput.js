@@ -1,5 +1,6 @@
 import React from 'react';
 import {userInput, handleUserSubmit} from './../../../../action/action';
+import classes from './UserInput.module.css';
 import {connect} from 'react-redux';
 
 const UserInput = (props) => {
@@ -15,11 +16,12 @@ const UserInput = (props) => {
         props.userInput.value =''
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={classes.Form}>
             <input 
                 placeholder="imessage"
                 value={props.userInput.value}
                 onChange={userInputChangeHandler}
+                className={classes.Input}
             />
         </form>
     )
