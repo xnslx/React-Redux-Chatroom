@@ -186,7 +186,7 @@ const messagesReducer = (state = messagesInitial,action) => {
                 activeUserMessages:state.messages[action.userName]
             }
         case actionTypes.USER_SUBMIT:
-            const number =4
+            const number = +Object.keys(state.activeUserMessages).pop()+1
             return {
                 ...state,
                 activeUserMessages:{
