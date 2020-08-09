@@ -8,7 +8,6 @@ const SideBar = (props) => {
     console.log(props)
     const data = Object.keys(props.contacts).map(key=> props.contacts[key])
     // console.log(data)
-
     const clickHandler = (id,contact) => {
         // console.log(id)
         props.dispatch(setActiveUserId(id));
