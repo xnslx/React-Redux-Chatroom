@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-Redux-Chatroom/static/css/main.288a80ee.chunk.css",
-    "main.js": "/React-Redux-Chatroom/static/js/main.90fc470d.chunk.js",
-    "main.js.map": "/React-Redux-Chatroom/static/js/main.90fc470d.chunk.js.map",
+    "main.js": "/React-Redux-Chatroom/static/js/main.445ae2f4.chunk.js",
+    "main.js.map": "/React-Redux-Chatroom/static/js/main.445ae2f4.chunk.js.map",
     "runtime-main.js": "/React-Redux-Chatroom/static/js/runtime-main.73203897.js",
     "runtime-main.js.map": "/React-Redux-Chatroom/static/js/runtime-main.73203897.js.map",
     "static/js/2.e932a933.chunk.js": "/React-Redux-Chatroom/static/js/2.e932a933.chunk.js",
     "static/js/2.e932a933.chunk.js.map": "/React-Redux-Chatroom/static/js/2.e932a933.chunk.js.map",
     "index.html": "/React-Redux-Chatroom/index.html",
-    "precache-manifest.2ecea264c52d010ac34149261ddda111.js": "/React-Redux-Chatroom/precache-manifest.2ecea264c52d010ac34149261ddda111.js",
+    "precache-manifest.c343f33dfc3779172d88de9a3e24134d.js": "/React-Redux-Chatroom/precache-manifest.c343f33dfc3779172d88de9a3e24134d.js",
     "service-worker.js": "/React-Redux-Chatroom/service-worker.js",
     "static/css/main.288a80ee.chunk.css.map": "/React-Redux-Chatroom/static/css/main.288a80ee.chunk.css.map",
     "static/js/2.e932a933.chunk.js.LICENSE.txt": "/React-Redux-Chatroom/static/js/2.e932a933.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.73203897.js",
     "static/js/2.e932a933.chunk.js",
     "static/css/main.288a80ee.chunk.css",
-    "static/js/main.90fc470d.chunk.js"
+    "static/js/main.445ae2f4.chunk.js"
   ]
 }
