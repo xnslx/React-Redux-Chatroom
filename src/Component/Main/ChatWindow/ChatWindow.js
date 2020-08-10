@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
 
 const ChatWindow = (props) => {
-    console.log(props)
+    // console.log(props)
     const activeUserList = Object.keys(props.contacts).map(key=> props.contacts[key])
     const values = activeUserList.values()
     let activeUser;
@@ -17,7 +17,7 @@ const ChatWindow = (props) => {
             activeUser = value
         }
     }
-    console.log('activeUser', activeUser)
+    // console.log('activeUser', activeUser)
     // const activeUserMessages = Object.keys(props.activeUserMessages).map(key=>props.activeUserMessages[key])
     // console.log('activeUserMessages',activeUserMessages)
 
@@ -32,7 +32,7 @@ const ChatWindow = (props) => {
 
 
 const mapStateToProps = state => {
-    console.log(state)
+    // console.log(state)
     return {
         activeUserId: state.activeUserId,
         contacts:state.contacts,

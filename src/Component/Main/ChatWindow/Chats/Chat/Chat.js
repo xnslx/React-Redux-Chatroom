@@ -2,10 +2,8 @@ import React from 'react';
 // import classes from './Chat.module.css';
 
 const Chat = (props) => {
-    console.log(props);
+    // console.log(props);
     const {message, id, isUserMsg} = props;
-    // const {messages} = props;
-    // console.log(messages)
 
     return (
         // <div className={classes.ChatContainer}>

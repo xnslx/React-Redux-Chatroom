@@ -3,9 +3,9 @@ import classes from './Chats.module.css';
 import Chat from './Chat/Chat';
 
 const Chats = (props) => {
-    console.log('props', props)
+    // console.log('props', props)
     const {activeUserMessages} = props;
-    console.log('activeUserMessages',activeUserMessages)
+    // console.log('activeUserMessages',activeUserMessages)
     
     const updatedActiveUserMessages = Object.keys(activeUserMessages).map(key=>activeUserMessages[key])
     

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {userInput, handleUserSubmit} from './../../../../action/action';
 import classes from './UserInput.module.css';
 import {connect} from 'react-redux';
@@ -6,21 +6,24 @@ import {connect} from 'react-redux';
 const UserInput = (props) => {
     console.log(props)
 
-    const userInputChangeHandler = (e) => {
-        props.dispatch(userInput(e.target.value))
+    const textInput = useRef('')
+
+    const userInputChangeHandler = () => {
+        props.dispatch(userInput(textInput.current.value))
     }
 
     const handleSubmit = e => {
         e.preventDefault()
-        props.dispatch(handleUserSubmit(props.userInput.value, props.activeUserId))
-        props.userInput.value =''
+        props.dispatch(handleUserSubmit(textInput.current.value, props.activeUserId))
+        textInput.current.value =''
     }
     return (
         <form onSubmit={handleSubmit} className={classes.Form}>
             <input 
                 placeholder="imessage"
-                value={props.userInput.value}
-                onChange={userInputChangeHandler}
+                // value={props.userInput.value}
+                ref={textInput}
+                onBlur={userInputChangeHandler}
                 className={classes.Input}
             />
         </form>

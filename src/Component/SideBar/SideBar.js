@@ -5,7 +5,7 @@ import {getMessages} from './../../action/action';
 import { connect} from 'react-redux';
 
 const SideBar = (props) => {
-    console.log(props)
+    // console.log(props)
     const data = Object.keys(props.contacts).map(key=> props.contacts[key])
     // console.log(data)
     const clickHandler = (id,contact) => {
